@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 #header {
-  height: 100px;
+  height: 90px;
+  box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.5);
 }
 
 #logo-title {
@@ -13,7 +15,7 @@
 
 #header-img,
 #title {
-  height: 90px;
+  height: 80px;
 }
 
 #header-img {
@@ -27,6 +29,8 @@
   flex-grow: 2;
   font-size: 1.7em;
   text-align: center;
+  font-family: 'Dancing Script', cursive;
+
 }
 
 #nav-bar {
@@ -47,12 +51,19 @@
   width: 100px;
   text-align: center;
   margin-top: 35px;
+
 }
 
 a {
   text-decoration: none;
   color: grey;
-  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #lead-title {
@@ -81,13 +92,16 @@ a {
 #product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .items {
   text-align: center;
-  padding: 1rem;
-  max-width: 500px;
+  padding: 0.5rem 1rem 2rem;
+  max-width: 420px;
+  border: 0.5px solid lightgrey;
+  border-radius: 5%;
+  margin: 20px;
 }
 
 .items > ul {
@@ -100,15 +114,25 @@ a {
   padding: 10px;
 }
 
+.items > h3 {
+  /* padding: 10px;
+  margin: 0; */
+}
+
 .items p {
   text-align: justify;
   font-size: 14px;
+  padding: 10px 20px;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
   height: 80px;
+  color: grey;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -131,11 +155,12 @@ footer {
   }
 
   a {
-    font-size: 1.3rem;
+    font-size: 12px;
   }
 
   #video {
     min-width: 55%;
+
   }
 
 }
