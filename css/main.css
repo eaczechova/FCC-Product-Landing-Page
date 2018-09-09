@@ -4,8 +4,11 @@
 }
 
 #header {
-  height: 90px;
-  box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.5);
+  height: 100px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
 }
 
 #logo-title {
@@ -30,10 +33,9 @@
   font-size: 1.7em;
   text-align: center;
   font-family: 'Dancing Script', cursive;
-
 }
 
-#nav-bar {
+#nav-link {
   flex-grow: 1;
 }
 
@@ -44,6 +46,7 @@
   display: flex;
   justify-content: space-around;
   height: 90px;
+  background-color: white;
 }
 
 #nav-bar > ul > li {
@@ -51,12 +54,11 @@
   width: 100px;
   text-align: center;
   margin-top: 35px;
-
 }
 
 a {
   text-decoration: none;
-  color: grey;
+  color: RGB(106, 108, 116);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 12px;
@@ -68,13 +70,39 @@ a:hover {
 
 #lead-title {
   text-align: center;
-  padding: 2rem;
-  margin-top: 80px;
+  padding: 4rem 2rem 0rem;
+  margin-top: 130px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 #form {
   text-align: center;
   padding: 1rem;
+}
+
+#form > p {
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+
+#email {
+  width: 280px;
+  height: 30px;
+  border-radius: 0.4rem;
+  border-color: color: RGB(106, 108, 116);
+  letter-spacing: 0.1rem;
+  font-size: 12px;
+}
+
+#submit {
+  height: 30px;
+  background-color: RGB(250, 168, 40);
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 
 #video {
@@ -86,7 +114,9 @@ a:hover {
 
 #details-title {
   text-align: center;
-  padding: 1rem;
+  padding: 4rem 2rem 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 #product-list {
@@ -97,32 +127,63 @@ a:hover {
 
 .items {
   text-align: center;
-  padding: 0.5rem 1rem 2rem;
   max-width: 420px;
-  border: 0.5px solid lightgrey;
+  border: 0.5px solid RGB(106, 108, 116);
   border-radius: 5%;
   margin: 20px;
+  overflow: hidden;
 }
 
 .items > ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .items > ul > li:first-child {
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px;
+  font-size: 1.3rem;
+  padding: 10px 0;
 }
 
-.items > h3 {
-  /* padding: 10px;
-  margin: 0; */
+.items > ul > li {
+  font-size: 1.1rem;
+  padding: 4px 0;
+}
+
+ .item-header {
+  background-color: RGB(154, 203, 212);
+  color: black;
+  width: 100%;
+  display: inline-block;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding: 8px 0
 }
 
 .items p {
   text-align: justify;
   font-size: 14px;
   padding: 10px 20px;
+}
+
+.select-button {
+  background-color: none;
+  width: 200px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: RGB(106, 108, 116);
+  box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.1);
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  margin-bottom: 20px;
+  transition: transform .5s;
+}
+
+.select-button:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -138,6 +199,9 @@ footer {
 @media screen and (min-width: 768px) {
   #header {
     display: flex;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.5);
   }
 
   #title {
@@ -147,7 +211,7 @@ footer {
   }
 
   #lead-title {
-    margin-top: 0;
+    margin-top: 90px;
   }
 
   #nav-bar > ul > li {
@@ -160,7 +224,5 @@ footer {
 
   #video {
     min-width: 55%;
-
   }
-
 }
